@@ -26,7 +26,7 @@ if (isDevelopment) {
   const corsOptions = {
     origin: prodCorsOrigin, // Restrict to production domain
   };
-  app.use(cors(corsOptions));
+  app.use(cors());
 } else {
   console.warn("Production CORS origin not set, defaulting to no CORS.");
 }
