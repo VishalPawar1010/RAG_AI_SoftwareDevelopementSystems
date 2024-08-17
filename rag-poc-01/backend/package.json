@@ -5,7 +5,7 @@
   "types": "./index.d.ts",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": "20.x"
   },
   "scripts": {
     "format": "prettier --ignore-unknown --cache --check .",
@@ -13,7 +13,8 @@
     "build": "tsup index.ts --format esm --dts",
     "start": "node dist/index.js",
     "dev": "concurrently \"tsup index.ts --format esm --dts --watch\" \"nodemon --watch dist/index.js\"",
-    "generate": "tsx src/controllers/engine/generate.ts"
+    "generate": "tsx src/controllers/engine/generate.ts",
+    "vercel-build":"echo hello"
   },
   "dependencies": {
     "ai": "^3.0.21",
